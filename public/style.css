@@ -29,6 +29,7 @@
 }
 .container .game-canvas span {
   text-align: center;
+  cursor: pointer;
 }
 
 * {

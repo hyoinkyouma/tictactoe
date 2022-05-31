@@ -1,7 +1,9 @@
-import gameRender from "./gameRender.js";
+import { gameRender } from "./gameRender.js";
+import Listeners from "./listeners.js";
 
 const app = () => {
-  gameRender();
+  const gameArr = gameRender();
+  Listeners(gameArr);
 };
 
 app();
