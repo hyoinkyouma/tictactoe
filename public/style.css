@@ -1,0 +1,70 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  width: 100vw;
+  flex-direction: column;
+}
+.container .score {
+  display: flex;
+  gap: 1rem;
+}
+.container .score .player-score {
+  display: flex;
+  gap: 0.5rem;
+}
+.container .player-score:nth-child(2) span:nth-child(2) {
+  order: -1;
+}
+.container .game-canvas {
+  height: 70vh;
+  width: 50vw;
+  align-self: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+.container .game-canvas span {
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  font-family: sans-serif;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 10vh;
+}
+
+.logo {
+  font-size: 2rem;
+  text-align: center;
+}
+
+footer {
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer p {
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */

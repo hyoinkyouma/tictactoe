@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  width: 100vw;
+  flex-direction: column;
+  .score {
+    display: flex;
+    gap: 1rem;
+    .player-score {
+      display: flex;
+      gap: 0.5rem;
+    }
+  }
+  .player-score:nth-child(2) {
+    span:nth-child(2) {
+      order: -1;
+    }
+  }
+
+  .game-canvas {
+    height: 70vh;
+    width: 50vw;
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      text-align: center;
+    }
+  }
+}
