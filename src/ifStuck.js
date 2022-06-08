@@ -1,5 +1,4 @@
 import { tie } from "./modal.js";
-import pushToHistory from "./history.js";
 
 const checkIfStuck = (gameArr) => {
   let arr = gameArr;
@@ -10,7 +9,6 @@ const checkIfStuck = (gameArr) => {
     }
   });
   if (isStuck === 3) {
-    pushToHistory(arr);
     arr = unStuck();
     tie();
   }

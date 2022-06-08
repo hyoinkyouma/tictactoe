@@ -1,6 +1,5 @@
 import { Gamelogic } from "./gamelogic.js";
 import covertToHuman from "./coverToHuman.js";
-import pushToHistory from "./history.js";
 
 let gameArr = Gamelogic();
 const gameboardArr = document.querySelector(".game-canvas");
