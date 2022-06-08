@@ -1,4 +1,7 @@
 @use "./gameboard";
+@use "./nav";
+@use "./modal";
+@use "./history";
 
 //colors
 $primary: #0000ff;
@@ -17,13 +20,6 @@ body {
   color: $light;
 }
 
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  height: 10vh;
-}
 .logo {
   font-size: 2rem;
   text-align: center;

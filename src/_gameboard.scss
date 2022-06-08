@@ -26,12 +26,12 @@ $light: #e7d27c;
   }
 
   .game-canvas {
-    max-width: 700px;
-    max-height: 700px;
+    max-width: 600px;
+    max-height: 600px;
     height: 50vw;
     width: 50vw;
-    min-width: 400px;
-    min-height: 400px;
+    min-width: 350px;
+    min-height: 350px;
     align-self: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

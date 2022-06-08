@@ -19,12 +19,12 @@
   order: -1;
 }
 .container .game-canvas {
-  max-width: 700px;
-  max-height: 700px;
+  max-width: 600px;
+  max-height: 600px;
   height: 50vw;
   width: 50vw;
-  min-width: 400px;
-  min-height: 400px;
+  min-width: 350px;
+  min-height: 350px;
   align-self: center;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -45,6 +45,99 @@
   font-size: 8vw;
 }
 
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+  height: 10vh;
+}
+nav .logo {
+  margin: 0 auto;
+  padding-left: 5rem;
+}
+nav button {
+  background-color: transparent;
+  font-size: 2rem;
+  padding: 0rem;
+  border: none;
+  color: #e7d27c;
+  margin: 1.5rem;
+  z-index: 10;
+}
+nav button:hover {
+  cursor: pointer;
+}
+
+.modal {
+  position: absolute;
+  top: 40%;
+  left: 42%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: rgba(175, 70, 49, 0.9725490196);
+  padding: 3rem;
+  border-radius: 10px;
+}
+.modal span {
+  padding: 0.5rem 0.8rem;
+  border-radius: 20px;
+  position: absolute;
+  right: 2%;
+  top: 4%;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.modal button {
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+  .modal {
+    top: 40%;
+    left: 10%;
+  }
+}
+.history {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.history div {
+  display: flex;
+  flex-direction: column;
+}
+.history div .row {
+  display: flex;
+  flex-direction: row;
+}
+.history div .row span {
+  border: solid 1px #e7d27c;
+  width: 5vw;
+  height: 5vw;
+  font-size: 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.history::before {
+  content: "Move History ";
+  padding: 1rem 0rem;
+  font-size: 2rem;
+  white-space: pre;
+  margin-top: 1rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -56,14 +149,6 @@ body {
   font-family: sans-serif;
   background-color: #050a30;
   color: #e7d27c;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  height: 10vh;
 }
 
 .logo {

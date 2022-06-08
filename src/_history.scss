@@ -1,0 +1,39 @@
+//colors
+$primary: #0000ff;
+$grey: #050a307b;
+$light: #e7d27c;
+
+.history {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    .row {
+      display: flex;
+      flex-direction: row;
+      span {
+        border: solid 1px $light;
+        width: 5vw;
+        height: 5vw;
+        font-size: 4vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.history::before {
+  content: "Move History ";
+  padding: 1rem 0rem;
+  font-size: 2rem;
+  white-space: pre;
+  margin-top: 1rem;
+}

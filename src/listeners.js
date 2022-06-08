@@ -2,11 +2,11 @@ import { checkWin } from "./gamelogic.js";
 import { changeValue } from "./gameRender.js";
 import { winPoints } from "./winWinresult.js";
 import { checkIfStuck, unStuck } from "./ifStuck.js";
+import pushToHistory from "./history.js";
 
 const Listeners = (gameArr, currentPlayer = "p1") => {
   currentPlayer = currentPlayer === "p1" ? 1 : 4;
   let newGameArr = gameArr;
-  console.log(newGameArr);
   const cells = document.querySelectorAll(".cell");
   for (let i = 0; i < cells.length; i++) {
     cells[i].addEventListener("click", () => {
@@ -20,6 +20,8 @@ const Listeners = (gameArr, currentPlayer = "p1") => {
       if (i <= 8) {
         newGameArr[2][i - 6] = currentPlayer;
       }
+
+      pushToHistory(newGameArr);
       currentPlayer = currentPlayer === 1 ? 4 : 1;
       newGameArr = checkIfStuck(newGameArr);
       changeValue(newGameArr);
@@ -31,6 +33,7 @@ const Listeners = (gameArr, currentPlayer = "p1") => {
       }
     });
   }
+
   return newGameArr;
 };
 

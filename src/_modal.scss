@@ -1,0 +1,39 @@
+$primary: #0000ff;
+$grey: #050a30;
+$light: #e7d27c;
+$modal: #af4631f8;
+
+.modal {
+  position: absolute;
+  top: 40%;
+  left: 42%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: $modal;
+  padding: 3rem;
+  border-radius: 10px;
+  span {
+    padding: 0.5rem 0.8rem;
+    border-radius: 20px;
+    position: absolute;
+    right: 2%;
+    top: 4%;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  button {
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .modal {
+    top: 40%;
+    left: 10%;
+  }
+}
