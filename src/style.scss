@@ -1,4 +1,10 @@
 @use "./gameboard";
+
+//colors
+$primary: #0000ff;
+$grey: #050a30;
+$light: #e7d27c;
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +13,8 @@
 body {
   font-size: 1rem;
   font-family: sans-serif;
+  background-color: $grey;
+  color: $light;
 }
 
 nav {

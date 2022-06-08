@@ -7,12 +7,12 @@ const checkIfStuck = (gameArr) => {
     }
   });
   if (isStuck === 3) {
-    arr = stepBro();
+    arr = unStuck();
   }
   return arr;
 };
 
-const stepBro = () => {
+const unStuck = () => {
   return [
     [0, 0, 0],
     [0, 0, 0],
@@ -20,4 +20,4 @@ const stepBro = () => {
   ];
 };
 
-export { checkIfStuck, stepBro };
+export { checkIfStuck, unStuck };

@@ -13,6 +13,10 @@ const gameRender = () => {
       gameboardArr.append(arr);
     });
   }
+
+  const cells = document.querySelectorAll(".cell");
+  covertToHuman(cells);
+
   return gameArr;
 };
 

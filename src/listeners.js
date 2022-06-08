@@ -1,7 +1,7 @@
 import { checkWin } from "./gamelogic.js";
 import { changeValue } from "./gameRender.js";
 import { winPoints } from "./winWinresult.js";
-import { checkIfStuck, stepBro } from "./checkIfStepsisIsStuck.js";
+import { checkIfStuck, unStuck } from "./ifStuck.js";
 
 const Listeners = (gameArr, currentPlayer = "p1") => {
   currentPlayer = currentPlayer === "p1" ? 1 : 4;
@@ -10,7 +10,7 @@ const Listeners = (gameArr, currentPlayer = "p1") => {
   const cells = document.querySelectorAll(".cell");
   for (let i = 0; i < cells.length; i++) {
     cells[i].addEventListener("click", () => {
-      if (cells[i].textContent !== "0") return;
+      if (cells[i].textContent !== "") return;
       if (i <= 2) {
         newGameArr[0][i] = currentPlayer;
       }
@@ -26,7 +26,7 @@ const Listeners = (gameArr, currentPlayer = "p1") => {
       const winner = checkWin(newGameArr);
       if (winner != "") {
         winPoints(winner);
-        newGameArr = stepBro(newGameArr);
+        newGameArr = unStuck(newGameArr);
         changeValue(newGameArr);
       }
     });
